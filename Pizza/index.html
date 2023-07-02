@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Pizza 神谕站</title>
+		<link rel="icon" href="../image/Pizza.ico">
+		<link rel="stylesheet" type="text/css" href="../style/whole.css">
+	</head>
+	<!-- 实现顶部导航栏功能 -->
+		<div id="nav">
+			<ul class="item">
+				<li/* class="cur"*/><a href="/indexs.html#main_overview">总览</a></li>
+				<li><a href="/indexs.html#main_api">网站应用</a></li>
+				<li><a href="/indexs.html#main_visit">网站访问量</a></li>
+			</ul>
+		</div>
+	<!-- 单独设置placeholder的颜色 -->
+	<style>
+		input::-webkit-input-placeholder {
+			color:gray;
+		}
+		input::-moz-placeholder {
+			/* Mozilla Firefox 19+ */
+			color: gray;
+		}
+		input:-moz-placeholder {
+			/* Mozilla Firefox 4 to 18 */
+			color: gray;
+		}
+		input:-ms-input-placeholder {
+			/* Internet Explorer 10-11 */
+			color: gray;
+		}
+	</style>
+	<body>
+		<div id="main">
+			<h1>Pizza 神谕站</h1>
+			<h4>由「拜 Pizza 会」官方出品</h4>
+			<div class="form">
+				<div class="item">
+					<input type="text" id="inputString" placeholder="对 Pizza 说的话">
+				</div>
+			</div>
+			<button onclick="calculateHash()">获取神谕</button>
+			<br></p>Pizza 曰：<div id="result"></div></p>
+			<script>
+				function calculateHash() {
+					var inputString = document.getElementById("inputString").value;
+					var hashValue = hash(inputString);
+					var array = ["string1", "string2", "string3", "string4", "string5"]; // Your array of strings
+					var index = mod(hashValue, array.length);
+					var selectedString = array[index];
+					document.getElementById("result").innerHTML = selectedString;
+				}
+				function hash(str) {
+					var hash = 0;
+					if (str.length == 0) {
+						return hash;
+					}
+					for (var i = 0; i < str.length; i++) {
+					var char = str.charCodeAt(i);
+						hash = ((hash << 5) - hash) + char;
+						hash = hash & hash; // Convert to 32bit integer
+					}
+					return hash;
+				}
+				function mod(n, m) {
+					return ((n % m) + m) % m;
+				}
+			</script>
+		</div>
+	</body>
+</html>
