@@ -1,46 +1,63 @@
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>Jerrycyx 的“官网”</title>
 		<link rel="icon" href="./image/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="./style/whole.css">
 	</head>
-	<body >
-		<h1>欢迎来到 Jerrycyx 的“官网”</h1>
-		<p>由于本人太蒻不会 HTML 或者 CSS 或者 Javascript 并且还没钱，所以这个网站十分的<strong>简洁</strong>。</p>
-		<p>
-			你可以在以下的网站找到我：
-			<a href="https://www.luogu.com.cn/user/545986" target="_blank">洛谷</a>
-		</p>
-		<p>
-			你也可以在这里给我留言：
-			<a href="https://note.ms/jerrycyx" target="_blank"> Note.ms</a>
-		</p>
-		<h2>网站应用（当然不是自己写的）</h2>
-		<p>
-			Three-Body 三体运动模拟器：
-			<a href="./api/Three-Body/" target="_blank"> 点击这里</a>
-		</p>
-		<p>
-			Double Pendulum Simulation 双钟摆轨迹模拟：
-			<a href="./api/double-pendulum-simulation/" target="_blank"> 点击这里</a>
-		</p>
-		<p>
-			2048 经典的数字游戏：
-			<a href="./api/2048/" target="_blank"> 点击这里</a>
-		</p>
-		<p>
-			A Dark Room 小黑屋文字游戏：
-			<a href="http://adarkroom.doublespeakgames.com/?lang=zh_cn" target="_blank"> 点击这里</a>
-		</p>
-		<p>
-			Bin-rain 类似《黑客帝国》中的二进制雨：
-			<a href="./api/Bin-rain/" target="_blank"> 点击这里</a>
-		</p>
-		<p>
-			Homo 恶臭数字论证器（任意数字恶臭化）：
-			<a href="./api/Homo/" target="_blank"> 点击这里</a>
-		</p>
-		<h2>网站访问量：</h2>
-		<p><img src="https://flagcounter.me/cNT/"  alt="refresh" /></p>
+	<!-- 实现顶部导航栏功能 -->
+		<div id="nav">
+			<ul class="item">
+				<li/* class="cur"*/><a href="#main_overview">总览</a></li>
+				<li><a href="#main_api">网站应用</a></li>
+				<li><a href="#main_visit">网站访问量</a></li>
+			</ul>
+		</div>
+	<body>
+		<div id="main">
+			<div id="main_overview">
+				<h1>欢迎来到 Jerrycyx 的“官网”</h1>
+				<p>由于本人太蒻不会 HTML 或者 CSS 或者 Javascript 并且还没钱，所以这个网站十分的<strong>简洁</strong>。</p>
+				<p>
+					你可以在以下的网站找到我：
+					<a href="https://www.luogu.com.cn/user/545986" target="_blank">洛谷</a>
+				</p>
+				<p>
+					你也可以在这里给我留言：
+					<a href="https://note.ms/jerrycyx" target="_blank"> Note.ms</a>
+				</p>
+			</div>
+			<div id="main_api">
+				<h2>网站应用（当然不是自己写的）</h2>
+				<p>
+					Three-Body 三体运动模拟器：
+					<a href="./api/Three-Body/" target="_blank"> 点击这里</a>
+				</p>
+				<p>
+					Double Pendulum Simulation 双钟摆轨迹模拟：
+					<a href="./api/double-pendulum-simulation/" target="_blank"> 点击这里</a>
+				</p>
+				<p>
+					2048 经典的数字游戏：
+					<a href="./api/2048/" target="_blank"> 点击这里</a>
+				</p>
+				<p>
+					A Dark Room 小黑屋文字游戏：
+					<a href="http://adarkroom.doublespeakgames.com/?lang=zh_cn" target="_blank"> 点击这里</a>
+				</p>
+				<p>
+					Bin-rain 类似《黑客帝国》中的二进制雨：
+					<a href="./api/Bin-rain/" target="_blank"> 点击这里</a>
+				</p>
+				<p>
+					Homo 恶臭数字论证器（任意数字恶臭化）：
+					<a href="./api/Homo/" target="_blank"> 点击这里</a>
+				</p>
+			</div>
+			<div id="main_visit">
+				<h2>网站访问量：</h2>
+				<p><img src="https://flagcounter.me/cNT/"  alt="refresh" /></p>
+			</div>
+		</div>
 	</body>
 </html>
