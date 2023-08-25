@@ -1,46 +1,27 @@
-<nav id="nav">
-	<ul class="item">
-		<li/* class="cur"*/><a href="#main_overview" target="_blank">总览</a></li>
-		<li><a href="#main_api" target="_blank">网站应用</a></li>
-		<li><a href="#main_visit" target="_blank">网站访问量</a></li>
-		<li><a href="/Pizza/" target="_blank">Pizza 神域站</a></li>
-	</ul>
-</div>
-<style>
-	/* 导航栏 */
-	#nav{
-		width: 100%;
-		height: 60px;
-		background-color: #00000080;
-	}
-	/* 无序列表 */
-	#nav ul {
-		float:left;
-		margin: 0px;
-		padding: 0 0 0 0;
-		width: 920px;
-		list-style: none;
-	}
-	/* 让链接横排 */
-	#nav ul li {
-		display: inline;
-	}
-	/* 字体美化等 */
-	#nav ul li a {
-		float: left;
-		padding: 11px 20px; 
-		font-size: 28px;
-		text-align: center;
-		text-decoration: none;
-		color: #fff;	
-		font-family: Tahoma;
-		outline: none;
-	}
-	/* 鼠标经过该链接，变色 */
-	#nav li a:hover {
-		color:cornflowerblue;
-		background-color:white;
-		/*弧度*/
-		border-radius: 30px; 
-	}
-</style>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="nav.css">
+</head>
+
+<body>
+	<nav class="nav">
+		<div class="logo fl">
+			<a href="../index.html" target="_top"><img src="../image/Head.png" alt="img" height="100%"></a>
+		</div>
+		<div class="link fl">
+			<ul>
+				<li><a href="../index.html#overview" target="_top">总览</a></li>
+				<li><a href="../index.html#api" target="_top">API</a></li>
+				<li><a href="../index.html#visit" target="_top">访问量</a></li>
+			</ul>
+		</div>
+		<div class="search fr">
+			<input type="search" id="search" name="q" placeholder="只是个摆设">
+			<input type="button" value="搜索">
+		</div>
+	</nav>
+</body>
+
+</html>
