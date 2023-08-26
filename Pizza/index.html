@@ -1,65 +1,25 @@
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Pizza 神谕站</title>
-		<link rel="icon" href="../image/Pizza.ico">
-		<link rel="stylesheet" type="text/css" href="../style/whole.css">
-	</head>
-	<iframe src="/includes/nav.html" frameborder="0" width="100%" height="200"></iframe>
-	<style>
-		input::-webkit-input-placeholder {
-			color:gray;
-		}
-		input::-moz-placeholder {
-			/* Mozilla Firefox 19+ */
-			color: gray;
-		}
-		input:-moz-placeholder {
-			/* Mozilla Firefox 4 to 18 */
-			color: gray;
-		}
-		input:-ms-input-placeholder {
-			/* Internet Explorer 10-11 */
-			color: gray;
-		}
-	</style>
-	<body>
-		<div id="main">
-			<h1>Pizza 神谕站</h1>
-			<h4>由「拜 Pizza 会」官方出品</h4>
-			<div class="form">
-				<div class="item">
-					<input type="text" id="inputString" placeholder="对 Pizza 说的话">
-				</div>
-			</div>
-			<button onclick="calculateHash()">获取神谕</button>
-			<br></p>Pizza 曰：<div id="result"></div></p>
-			<script>
-				function calculateHash() {
-					var inputString = document.getElementById("inputString").value;
-					var hashValue = hash(inputString);
-					var array = ["string1", "string2", "string3", "string4", "string5"]; // Your array of strings
-					var index = mod(hashValue, array.length);
-					var selectedString = array[index];
-					document.getElementById("result").innerHTML = selectedString;
-				}
-				function hash(str) {
-					var hash = 0;
-					if (str.length == 0) {
-						return hash;
-					}
-					for (var i = 0; i < str.length; i++) {
-					var char = str.charCodeAt(i);
-						hash = ((hash << 5) - hash) + char;
-						hash = hash & hash; // Convert to 32bit integer
-					}
-					return hash;
-				}
-				function mod(n, m) {
-					return ((n % m) + m) % m;
-				}
-			</script>
-		</div>
-	</body>
-	<iframe src="/includes/footer.html" frameborder="0" width="100%" height="200"></iframe>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Pizza 神谕站</title>
+	<link rel="icon" href="../image/Pizza.ico">
+	<link rel="stylesheet" type="text/css" href="../style/whole.css">
+	<link rel="stylesheet" type="text/css" href="Pizza.css">
+	<script type="text/javascript" src="getString.js"></script>
+</head>
+<iframe src="/includes/nav.html" frameborder="0" width="100%" height="90"></iframe>
+
+<body>
+	<div id="main">
+		<h1>Pizza 神谕站</h1>
+		<h4>「拜 Pizza 会」官方出品</h4>
+		<input type="text" id="inputString" placeholder="询问 Pizza" oninput="calculateHash()">
+		<p>Pizza 曰：</p>
+		<p id="result"></p>
+		</p>
+	</div>
+</body>
+<iframe src="/includes/footer.html" frameborder="0" width="100%" height="200"></iframe>
+
 </html>

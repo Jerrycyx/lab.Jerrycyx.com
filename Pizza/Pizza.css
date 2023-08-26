@@ -1,0 +1,24 @@
+input::-webkit-input-placeholder {
+    color: gray;
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: gray;
+}
+
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: gray;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: gray;
+}
+
+input[type="text"] {
+    height: 50px;
+    width: 300px;
+    font-size: 20px;
+}
