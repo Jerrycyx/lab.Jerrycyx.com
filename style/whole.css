@@ -1,124 +1,99 @@
-/* 字体美化等 */
-#main{
-	padding: 11px 20px; 
+* {
+	outline: none;
+}
+.sticky {
+	position: sticky;
+	top: 0px;
+}
+.nav {
+	z-index: 10;
+}
+iframe {
+	border: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+	/* vertical-align: top; */
+}
+
+#main {
+	z-index: 0;
 	font-size: 20px;
 	text-align: center;
 	text-decoration: none;
-	color: #fff;	
-	font-family: Tahoma;
+	/* font-family: Microsoft soft; */
 	outline: none;
-
-}
-
-/* 导航栏 */
-#nav{
-	width: 100%;
-	height: 60px;
-	background-color: #00000080;
-}
-/* 无序列表 */
-#nav ul {
-	float:left;
-	margin: 0px;
-	padding: 0 0 0 0;
-	width: 920px;
-	list-style: none;
-}
-/* 让链接横排 */
-#nav ul li {
-	display: inline;
-}
-/* 字体美化等 */
-#nav ul li a {
-	float: left;
-	padding: 11px 20px; 
-	font-size: 28px;
+	color: #FFFFFF;
+	border: 1px solid white;
+	width: 800px;
 	text-align: center;
-	text-decoration: none;
-	color: #fff;	
-	font-family: Tahoma;
-	outline: none;
-}
-/* 鼠标经过该链接，变色 */
-#nav li a:hover {
-	color:cornflowerblue;
-	background-color:white;
-	/*弧度*/
-	border-radius: 30px; 
-   
+	margin: 0px auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background: #00000080;
+	padding: 20px 20px;
+	border-radius: 30px;
+	transition: 0.5s;
+	transform-origin: center;
+	backdrop-filter: blur(5px);
 }
 
-/* 增加背景图 */
 body {
-	background: url("../image/background.jpg") center; /* 首先增加背景图 */
-	background-size: 100% auto; /* 设置背景的大小 */
-	background-repeat: no-repeat; /* 将背景设置为不重复显示 */
+	background: url("../image/background-new.jpg") center;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-color: #000000
 }
 
-
-#main {
-	color: #FFFFFF;
-	text-align: center;
-	border: 1px solid white;
-	width: 36%;
-	text-align: center;
-	margin: 0 auto;
-	margin-top: 5%;  /* 高度调整 */
-	background: #00000080;
-	padding: 20px 50px;
-
-	/* 将按钮的左右边框设置为圆弧 */
-	border-radius: 30px; 
-	transition:0.2s;
+a {
+	color: dodgerblue !important;
+	text-decoration: none !important;
+	position: relative;
 }
 
-/* 对输入窗口进行修改 */
-#main .form .item p {
-	font-size: 18px; /* 修改按钮文字的大小 */
-	color: white;
-}
-#main .form .item input{
-	width: 200px; /* 设置合适的宽度 */
-	border: 0; /* 首先将边界取消，方便下面修改下部边界宽度 */
-	border-bottom: 5px solid white; /* 将下边界进行修改，显示出横线效果 */
-	font-size: 18px; /* 将字体适当的变大加粗 */
-	background: #ffffff00; /* 将输入框设置为透明 */
-	color: white; /* 上面的文本颜色设置为白色，但是placeholder的颜色要单独设置 */
-	padding: 5px 10px; /* 为了placeholder的内容不是顶格显示，增加内部边界 */
+/* 下划线（从中间向两边） */
+a::after {
+	content: '';
+	width: 100%;
+	height: 1.5px;
+	/* currentColor可以获取当前元素或父元素的color */
+	background-color: dodgerblue;
+	position: absolute;
+	left: 0%;
+	bottom: 0;
+	/* 沿x轴缩放至隐藏 */
+	transform: scaleX(0);
+	/* 设置变换圆点为中间 */
+	transform-origin: center;
+	/* 设置变换时的过渡 */
+	transition: transform 0.2s ease-out;
 }
 
-/* 对button进行美化 */
-#main button {
-	/* 设置合适的按钮的长和宽 */
-	width: 150px; 
-	/* height: 30px; */
-	text-transform: uppercase;
-	border: 3px solid #FFFFFF; /* 设置按钮的边界粗细和颜色 */
-	margin-top: 18px; /* 设置合适的上部外框的宽度，增加与上面的password框的距离 */
-	text-align: center;
-	font-size: 18px; /* 修改按钮文字的大小 */
-	/* 设置按钮里面字体颜色 */
-	color: #FFFFFF;
-	line-height: 50px;
-	border-radius: 30px; /* 将按钮的左右边框设置为圆弧 */
+a:hover::after {
+	/* 沿x轴缩放至显示 */
+	transform: scaleX(1);
+	/* 设置变换圆点为两边 */
+	transform-origin: center;
+}
+
+input[type="text"] {
+	border: none;
+	border-radius: 3px 3px 0px 0px;
+	background: transparent;
+	border-bottom: #DCDCDC solid 2px;
+	color: #DCDCDC;
+}
+
+input[type="button"], button {
+	color: #DCDCDC;
+	background-color: #21263080;
+	border-radius: 3px;
+	border-color: #DCDCDC;
+	transition: all 0.3s;
+}
+input[type="button"]:hover, button:hover {
+	background-color: #DCDCDC;
+	color: #212630;
 	cursor: pointer;
-	/* 圆角弧度24px */
-	transition:0.2s;
-	/* 设置按钮背景为透明 */
-	background:rgba(0,0,0,0);   
 }
-
-#main a:link, a:visited {
-	text-decoration: none;
-	color: #A1FDFF;
-	/*background-color: rgba(31, 219, 222, 0.1);*/
-}
-
-#main a:hover, a:active {
-	text-decoration: underline;
-	color: #A1FDFF;
-	/*background-color: rgba(31, 219, 222, 0.2);*/
-}
-
