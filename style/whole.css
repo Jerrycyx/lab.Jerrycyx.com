@@ -39,7 +39,7 @@ iframe {
 }
 
 body {
-	background: url("../image/background-new.jpg") center;
+	background: url("/image/background-new.jpg") center;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-attachment: fixed;

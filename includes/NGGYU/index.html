@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Never Gonna Give You Up</title>
+    <style type="text/css">
+        .scare {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .scare {
+            z-index: 1;
+        }
+
+        video#video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        video#video::-webkit-media-controls-enclosure {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scare">
+        <video id="video" class="video" src="https://vdse.bdstatic.com/192d9a98d782d9c74c96f09db9378d93.mp4" loop="loop"
+            autoplay></video>
+        <img src="https://count.getloli.com/get/@rickroll" style="display: none;">
+    </div>
+    <script type="text/javascript">
+        const video = document.getElementById("video");
+        function videoClick(event) {
+            window.location.href='/';
+        }
+        video.addEventListener("click", videoClick);
+    </script>
+</body>
+
+</html>
