@@ -22,3 +22,98 @@ input[type="text"] {
     width: 300px;
     font-size: 20px;
 }
+
+ 
+:root{
+    --rainbow-gradient:
+            linear-gradient(-90deg,
+            #602ce5 0,
+            #2ce597 30%,
+            #e7bb18 50%,
+            #ff7657 70%,
+            #45c1ee 90%,
+            #2ce597 100%);
+}
+
+.r0 {
+    color: Gray;
+}
+.r1 {
+    font-weight:bold; /*设置字体粗细*/
+
+    text-shadow:0 0 2px #fefcc9,
+    1px -1px 3px #feec85,
+    -2px -2px 4px #ffae34,
+    2px -4px 5px #ec760c,
+    0 -8px 7px #f38e1c; /*设置文字阴影*/
+    -webkit-animation: flame 2s infinite;    /*设置动画*/
+}
+
+.r3 {
+    background-image: var(--rainbow-gradient, #fff);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    filter: drop-shadow(0 0 2rem #000);
+    text-shadow: none !important;
+}
+.r4 {
+    font-weight:bolder; /*设置字体粗细*/
+    -webkit-animation:light 1.5s ease-in-out infinite alternate;/*设置动画*/
+}
+
+@-webkit-keyframes flame{    /*创建动画*/
+    0%{
+       text-shadow:0 0 5px #fefcc9,
+     1px -1px 3px #feec85,
+     -2px -2px 4px #ffae34,
+     2px -4px 5px #ec760c,
+     0 -8px 7px #f38e1c;
+    }
+    30%{
+       text-shadow:0 0 5px #fefcc9,
+     1px -1px 3px #feec85,
+     -2px -2px 4px #ffae34,
+     2px -4px 5px #ec760c,
+     1px -9px 8px #f38e1c;
+    }
+    60%{
+       text-shadow:0 0 5px #fefcc9,
+        1px -1px 3px #feec85,
+        -2px -2px 4px #ffae34,
+        2px -4px 5px #ec760c,
+        px -8px 10px #f38e1c;
+    }
+    100%{
+       text-shadow:0 0 5px #fefcc9,
+    1px -1px 3px #feec85,
+    -2px -2px 4px #ffae34,
+    2px -4px 5px #ec760c,
+    0 -8px 7px #f38e1c;
+    }
+}
+@-webkit-keyframes light{/*创建动画*/
+    from{
+        text-shadow:0 0 1px #fff,
+                        0 0 2px #fff,
+                        0 0 3px #fff,
+                        0 0 4px #0000FF,
+                        0 0 7px #0000FF,
+                        0 0 8px #0000FF,
+                        0 0 10px #0000FF,
+                        0 0 15px #0000FF;
+    }
+    to{
+        text-shadow:0 0 5px #fff,
+                        0 0 1px #fff,
+                        0 0 1.5px #fff,
+                        0 0 2px #0000FF,
+                        0 0 3.5px #0000FF,
+                        0 0 4px #0000FF,
+                        0 0 5px #0000FF,
+                        0 0 7.5px #0000FF;
+    }
+}
